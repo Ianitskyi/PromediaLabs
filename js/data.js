@@ -81,6 +81,13 @@ function formatPrice(course) {
   return `${course.price.toLocaleString("uk-UA")} ${course.currency || "UAH"}`;
 }
 
+/* Коротка версія для тісної картки в каталозі — повний priceNote (з
+   поясненням, хто фінансує) показуємо тільки на сторінці курсу. */
+function formatPriceShort(course) {
+  if (course.price == null) return "Безкоштовно";
+  return `${course.price.toLocaleString("uk-UA")} ${course.currency || "UAH"}`;
+}
+
 function formatDateRange(course) {
   if (course.startDate && course.endDate) {
     return `${formatDate(course.startDate)} – ${formatDate(course.endDate)}`;

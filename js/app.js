@@ -12,7 +12,7 @@ function courseCardHTML(course) {
       <p class="desc">${course.short}</p>
       <div class="course-meta">
         <span>${formatDateRange(course)}</span>
-        <span class="course-price">${formatPrice(course)}</span>
+        <span class="course-price">${formatPriceShort(course)}</span>
       </div>
       <div class="cta-row">
         <span class="btn${disabled ? " disabled" : ""}">${ctaLabel(course)}</span>
@@ -56,7 +56,6 @@ function renderSite(site) {
     <div class="how-card"><h3>${s.title}</h3><p>${s.text}</p></div>
   `).join("");
 
-  document.getElementById("footerOrg").textContent = `© ${site.footer.org}`;
   document.getElementById("footerLinks").innerHTML = site.footer.links
     .map((l) => `<a href="${l.url}">${l.label}</a>`)
     .join(" · ");

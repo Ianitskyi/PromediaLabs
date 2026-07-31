@@ -11,27 +11,35 @@
 <body>
 
 <header class="site-header">
-  <a class="brand" href="index.html">ProMedia Labs <small>ProMedia NGO</small></a>
-  <nav class="site-nav">
-    <a href="index.html#catalog">Курси</a>
-    <a href="status.html">Мій статус</a>
-  </nav>
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="img/logo.png" alt="ProMedia" /></a>
+    <nav class="site-nav">
+      <a class="back" href="https://promedia.report">← ProMedia</a>
+      <a href="index.html#catalog">Курси</a>
+      <a href="status.html">Мій статус</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-  <div class="eyebrow" id="heroEyebrow">ProMedia NGO</div>
-  <h1 id="heroTitle">ProMedia Labs</h1>
-  <p id="heroSubtitle">Курси для медійників: офлайн-інтенсиви з відбором, онлайн-потоки з реєстрацією та курси в записі.</p>
-  <a class="btn" href="#catalog" id="heroCta">Переглянути курси</a>
+  <div class="hero-inner">
+    <div class="eyebrow" id="heroEyebrow">ProMedia NGO</div>
+    <h1 id="heroTitle">ProMedia Labs</h1>
+    <p id="heroSubtitle">Курси для медійників: офлайн-інтенсиви з відбором, онлайн-потоки з реєстрацією та курси в записі.</p>
+    <div class="accent-bar"></div>
+    <a class="btn" href="#catalog" id="heroCta">Переглянути курси</a>
+  </div>
 </section>
 
 <section class="how">
   <h2 id="howTitle">Як це працює</h2>
+  <div class="section-line"></div>
   <div class="how-grid" id="howGrid"></div>
 </section>
 
 <section class="catalog" id="catalog">
   <h2>Курси</h2>
+  <div class="section-line"></div>
   <div class="filters" id="filters">
     <button class="filter-btn active" data-filter="all">Усі</button>
     <button class="filter-btn" data-filter="offline_selection">Офлайн (відбір)</button>
@@ -44,9 +52,13 @@
 </section>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <span id="footerOrg">© ProMedia NGO</span>
-    <nav id="footerLinks"></nav>
+  <div class="footer-inner">
+    <img class="footer-logo" src="img/logo.png" alt="ProMedia" />
+    <div>
+      <p id="footerOrg">ProMedia Labs — освітні програми ProMedia NGO.</p>
+      <nav id="footerLinks"></nav>
+      <p class="copyright">© 2026 ProMedia. Усі права захищено.</p>
+    </div>
   </div>
 </footer>
 
