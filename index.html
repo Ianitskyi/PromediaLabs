@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ProMedia Labs — курси для медійників</title>
+<meta name="description" content="Офлайн-інтенсиви з відбором, онлайн-потоки з реєстрацією та курси в записі від ProMedia NGO." />
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">ProMedia Labs <small>ProMedia NGO</small></a>
+  <nav class="site-nav">
+    <a href="index.html#catalog">Курси</a>
+    <a href="status.html">Мій статус</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow" id="heroEyebrow">ProMedia NGO</div>
+  <h1 id="heroTitle">ProMedia Labs</h1>
+  <p id="heroSubtitle">Курси для медійників: офлайн-інтенсиви з відбором, онлайн-потоки з реєстрацією та курси в записі.</p>
+  <a class="btn" href="#catalog" id="heroCta">Переглянути курси</a>
+</section>
+
+<section class="how">
+  <h2 id="howTitle">Як це працює</h2>
+  <div class="how-grid" id="howGrid"></div>
+</section>
+
+<section class="catalog" id="catalog">
+  <h2>Курси</h2>
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-filter="all">Усі</button>
+    <button class="filter-btn" data-filter="offline_selection">Офлайн (відбір)</button>
+    <button class="filter-btn" data-filter="online_paid_cohort">Онлайн-потоки</button>
+    <button class="filter-btn" data-filter="recorded_paid">У записі</button>
+  </div>
+  <div class="course-grid" id="courseGrid">
+    <p style="color:var(--muted)">Завантаження курсів…</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span id="footerOrg">© ProMedia NGO</span>
+    <nav id="footerLinks"></nav>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+let ALL_COURSES = [];
+let activeFilter = "all";
+
+function courseCardHTML(course) {
+  const status = statusMeta(course);
+  const disabled = ctaDisabled(course);
+  return `
+    <a class="course-card" href="course.html?slug=${encodeURIComponent(course.slug)}">
+      <span class="badge status-${status.tone}">${status.label}</span>
+      <div class="format-tag">${course.format} · ${course.cadence || ""}</div>
+      <h3>${course.title}</h3>
+      <p class="desc">${course.short}</p>
+      <div class="course-meta">
+        <span>${formatDateRange(course)}</span>
+        <span class="course-price">${formatPrice(course)}</span>
+      </div>
+      <div class="cta-row">
+        <span class="btn${disabled ? " disabled" : ""}">${ctaLabel(course)}</span>
+      </div>
+    </a>
+  `;
+}
+
+function renderCourses() {
+  const grid = document.getElementById("courseGrid");
+  const filtered = activeFilter === "all"
+    ? ALL_COURSES
+    : ALL_COURSES.filter((c) => c.courseType === activeFilter);
+
+  if (!filtered.length) {
+    grid.innerHTML = `<p style="color:var(--muted)">Курсів у цій категорії поки немає.</p>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(courseCardHTML).join("");
+}
+
+function setupFilters() {
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeFilter = btn.dataset.filter;
+      renderCourses();
+    });
+  });
+}
+
+function renderSite(site) {
+  document.getElementById("heroEyebrow").textContent = site.hero.eyebrow;
+  document.getElementById("heroTitle").textContent = site.hero.title;
+  document.getElementById("heroSubtitle").textContent = site.hero.subtitle;
+  document.getElementById("heroCta").textContent = site.hero.primaryCta;
+
+  document.getElementById("howTitle").textContent = site.howItWorks.title;
+  document.getElementById("howGrid").innerHTML = site.howItWorks.steps.map((s) => `
+    <div class="how-card"><h3>${s.title}</h3><p>${s.text}</p></div>
+  `).join("");
+
+  document.getElementById("footerOrg").textContent = `© ${site.footer.org}`;
+  document.getElementById("footerLinks").innerHTML = site.footer.links
+    .map((l) => `<a href="${l.url}">${l.label}</a>`)
+    .join(" · ");
+}
+
+async function init() {
+  setupFilters();
+  const [courses, site] = await Promise.all([loadCourses(), loadSite()]);
+  ALL_COURSES = courses;
+  renderSite(site);
+  renderCourses();
+}
+
+init().catch((err) => {
+  document.getElementById("courseGrid").innerHTML =
+    `<p style="color:var(--red)">Не вдалося завантажити курси: ${err.message}</p>`;
+});

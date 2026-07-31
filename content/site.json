@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "admin": {
+    "label": "labs.promedia.report",
+    "repository": "Ianitskyi/PromediaLabs",
+    "editableFile": "content/site.json"
+  },
+
+  "hero": {
+    "eyebrow": "ProMedia NGO",
+    "title": "ProMedia Labs",
+    "subtitle": "Курси для медійників: офлайн-інтенсиви з відбором, онлайн-потоки з реєстрацією та курси в записі — все на одному сайті, з прозорими умовами набору.",
+    "primaryCta": "Переглянути курси"
+  },
+
+  "howItWorks": {
+    "title": "Як це працює",
+    "steps": [
+      {
+        "title": "Офлайн, раз на рік",
+        "text": "Оголошуємо набір, ви подаєте заявку з мотиваційним листом, редакційна рада відбирає учасників. Безкоштовно для відібраних."
+      },
+      {
+        "title": "Онлайн-потоки",
+        "text": "Оголошуємо старт потоку, ви реєструєтесь і оплачуєте місце, ближче до старту отримуєте запрошення з усіма посиланнями."
+      },
+      {
+        "title": "Курси в записі",
+        "text": "Доступні завжди. Оплачуєте — одразу отримуєте доступ до всіх лекцій, проходите у своєму темпі."
+      }
+    ]
+  },
+
+  "forms": {
+    "endpoint": null,
+    "_comment": "Поки null — форми надсилають заявку на contactEmail через mailto (js/submit.js). Коли з'явиться serverless-функція (Google Sheets + email), вкажіть тут її URL — код форм міняти не треба."
+  },
+
+  "footer": {
+    "org": "ProMedia NGO",
+    "contactEmail": "labs@promedia.report",
+    "links": [
+      { "label": "promedia.report", "url": "https://promedia.report" },
+      { "label": "Рейтинг вступу", "url": "https://ratings.promedia.report" }
+    ]
+  }
+}

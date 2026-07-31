@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Мій статус — ProMedia Labs</title>
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">ProMedia Labs <small>ProMedia NGO</small></a>
+  <nav class="site-nav">
+    <a href="index.html#catalog">Курси</a>
+    <a href="status.html">Мій статус</a>
+  </nav>
+</header>
+
+<div class="form-wrap">
+  <h1>Перевірити статус заявки</h1>
+  <p class="lead">
+    Коли ви подаєте заявку чи реєструєтесь на курс, ви отримуєте на email
+    номер заявки (формат <code>PML-XXXXXXX</code>) — за ним ми відповідаємо
+    на будь-яке звернення. Автоматична перевірка статусу онлайн з'явиться
+    пізніше разом із бекендом; наразі напишіть нам номер заявки і ми
+    відповімо, на якому вона етапі.
+  </p>
+
+  <div class="form-status" id="formStatus"></div>
+  <form id="statusForm">
+    <div class="field">
+      <label for="f_applicationId">Номер заявки</label>
+      <input type="text" id="f_applicationId" name="applicationId" placeholder="PML-XXXXXXX" required />
+      <div class="hint">Був у листі-підтвердженні одразу після подачі заявки.</div>
+    </div>
+    <div class="field">
+      <label for="f_email">Email, який вказали в заявці</label>
+      <input type="email" id="f_email" name="email" required />
+    </div>
+    <button class="btn" type="submit" style="width:100%; justify-content:center">Запитати статус</button>
+  </form>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap"><span>© ProMedia NGO</span></div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/submit.js"></script>
+<script src="js/status.js"></script>
+</body>
+</html>
