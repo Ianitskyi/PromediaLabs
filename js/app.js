@@ -45,18 +45,9 @@ function setupFilters() {
   });
 }
 
-function renderSite(site) {
-  document.getElementById("heroEyebrow").textContent = site.hero.eyebrow;
-  document.getElementById("heroTitle").textContent = site.hero.title;
-  document.getElementById("heroSubtitle").textContent = site.hero.subtitle;
-  document.getElementById("heroCta").textContent = site.hero.primaryCta;
-}
-
 async function init() {
   setupFilters();
-  const [courses, site] = await Promise.all([loadCourses(), loadSite()]);
-  ALL_COURSES = courses;
-  renderSite(site);
+  ALL_COURSES = await loadCourses();
   renderCourses();
 }
 

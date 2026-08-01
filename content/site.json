@@ -6,13 +6,6 @@
     "editableFile": "content/site.json"
   },
 
-  "hero": {
-    "eyebrow": "ProMedia NGO",
-    "title": "ProMedia Labs",
-    "subtitle": "Курси для медійників: офлайн-інтенсиви з відбором, онлайн-потоки з реєстрацією та курси в записі — все на одному сайті, з прозорими умовами набору.",
-    "primaryCta": "Переглянути курси"
-  },
-
   "howItWorks": {
     "title": "Як це працює",
     "steps": [
