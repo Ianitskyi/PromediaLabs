@@ -51,7 +51,7 @@ img { max-width: 100%; display: block; }
 .site-header-inner {
   max-width: 980px;
   margin: 0 auto;
-  padding: 16px 22px;
+  padding: 18px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,9 +59,9 @@ img { max-width: 100%; display: block; }
 }
 
 .brand { display: block; }
-.brand img { width: 132px; max-width: 44vw; height: auto; }
+.brand img { width: 178px; max-width: 52vw; height: auto; }
 
-.site-nav { display: flex; align-items: center; gap: 24px; font-weight: 700; font-size: 15px; flex-wrap: wrap; }
+.site-nav { display: flex; align-items: center; gap: 26px; font-weight: 700; font-size: 15px; flex-wrap: wrap; }
 .site-nav a { color: var(--navy); text-decoration: none; }
 .site-nav a:hover { color: var(--blue); }
 .site-nav a.back { color: var(--muted); font-weight: 700; }
@@ -71,32 +71,61 @@ img { max-width: 100%; display: block; }
 .hero {
   background: radial-gradient(circle at 78% 32%, rgba(47, 85, 231, .10), transparent 32%), linear-gradient(135deg, #fff 0%, #f7f8ff 100%);
   border-bottom: 1px solid var(--line);
-  padding: 58px 0 64px;
 }
-.hero-inner { max-width: 980px; margin: 0 auto; padding: 0 22px; }
+.hero-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 74px 22px 82px;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 44px;
+  align-items: center;
+}
 .hero .eyebrow {
-  margin: 0 0 14px;
+  margin: 0 0 30px;
   color: var(--blue);
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: .04em;
-  font-size: clamp(14px, 2.2vw, 16px);
+  font-size: clamp(15px, 2.6vw, 18px);
 }
 .hero h1 {
-  margin: 0 0 16px;
-  font-size: clamp(38px, 7vw, 62px);
-  line-height: .98;
-  letter-spacing: -.04em;
+  margin: 0 0 10px;
+  font-size: clamp(48px, 9vw, 78px);
+  line-height: .95;
+  letter-spacing: -.055em;
   color: var(--navy);
 }
 .hero p {
-  font-size: clamp(16px, 2.2vw, 19px);
+  font-size: clamp(17px, 2.4vw, 20px);
   color: var(--muted);
-  max-width: 620px;
-  margin: 0 0 24px;
+  max-width: 580px;
+  margin: 0;
   font-weight: 400;
 }
-.accent-bar { width: 60px; height: 5px; background: var(--yellow); border-radius: var(--radius-pill); margin: 0 0 26px; }
+.accent-bar { width: 66px; height: 5px; background: var(--yellow); border-radius: var(--radius-pill); margin: 34px 0 0; }
+.accent-bar + .btn { margin-top: 28px; }
+
+.hero-mark {
+  width: min(310px, 70vw);
+  height: min(310px, 70vw);
+  justify-self: center;
+  border-radius: 42%;
+  border: 2px solid rgba(47, 85, 231, .10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, .55);
+}
+.hero-mark .play {
+  width: 0;
+  height: 0;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  border-left: 112px solid var(--yellow);
+  margin-left: 24px;
+  filter: drop-shadow(0 12px 18px rgba(255, 182, 51, .22));
+}
 
 .btn {
   display: inline-flex;
@@ -322,21 +351,25 @@ img { max-width: 100%; display: block; }
   margin: 0 auto;
   padding: 38px 22px;
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 190px 1fr;
   gap: 36px;
   align-items: center;
 }
-.site-footer .footer-logo { width: 132px; max-width: 50vw; height: auto; display: block; background: #fff; border-radius: 12px; padding: 10px 12px; }
-.site-footer p { margin: 0 0 8px; color: rgba(255, 255, 255, .92); font-size: 14px; }
-.site-footer a { color: #fff; text-decoration: none; font-weight: 700; }
+.site-footer .footer-logo { width: 178px; max-width: 55vw; height: auto; display: block; background: #fff; border-radius: 14px; padding: 12px 14px; }
+.site-footer p { margin: 0 0 10px; color: rgba(255, 255, 255, .92); font-size: 15px; }
+.site-footer a { color: #fff; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
-.site-footer .copyright { color: var(--yellow); font-size: 13px; margin: 0; }
+.site-footer .copyright { color: var(--yellow) !important; font-size: 15px; }
 
 /* ---------- responsive ---------- */
 
 @media (max-width: 760px) {
+  .site-header-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .site-nav { gap: 18px; flex-wrap: wrap; }
+  .hero-inner { grid-template-columns: 1fr; padding: 52px 22px 62px; }
+  .hero-mark { display: none; }
   .how-grid { grid-template-columns: 1fr; }
   .course-body { grid-template-columns: 1fr; }
   .sidebar-card { position: static; }
-  .site-footer .footer-inner { grid-template-columns: 1fr; gap: 18px; }
+  .site-footer .footer-inner { grid-template-columns: 1fr; gap: 22px; }
 }

@@ -37,11 +37,7 @@
   },
 
   "footer": {
-    "org": "ProMedia NGO",
-    "contactEmail": "labs@promedia.report",
-    "links": [
-      { "label": "promedia.report", "url": "https://promedia.report" },
-      { "label": "Рейтинг вступу", "url": "https://ratings.promedia.report" }
-    ]
+    "_comment": "Футер тепер статична розмітка (як на promedia.report) — org/links тут не рендеряться, contactEmail далі використовує js/submit.js для mailto-фолбеку форм.",
+    "contactEmail": "labs@promedia.report"
   }
 }

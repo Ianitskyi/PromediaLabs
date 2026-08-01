@@ -55,10 +55,6 @@ function renderSite(site) {
   document.getElementById("howGrid").innerHTML = site.howItWorks.steps.map((s) => `
     <div class="how-card"><h3>${s.title}</h3><p>${s.text}</p></div>
   `).join("");
-
-  document.getElementById("footerLinks").innerHTML = site.footer.links
-    .map((l) => `<a href="${l.url}">${l.label}</a>`)
-    .join(" · ");
 }
 
 async function init() {
