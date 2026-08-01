@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap");
 
 :root {
-  --serif: "Playfair Display", Georgia, serif;
+  --brand-font: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
   --navy: #070b58;
   --navy-soft: #101f7a;
   --blue: #2f55e7;
@@ -63,12 +63,13 @@ img { max-width: 100%; display: block; }
 
 .brand {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--brand-font);
   font-weight: 800;
-  font-size: 26px;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -.015em;
   color: var(--navy);
   text-decoration: none;
-  letter-spacing: -.01em;
 }
 
 .site-nav { display: flex; align-items: center; gap: 26px; font-weight: 700; font-size: 15px; flex-wrap: wrap; }
