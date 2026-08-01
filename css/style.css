@@ -159,7 +159,11 @@ img { max-width: 100%; display: block; }
 
 /* ---------- catalog / filters ---------- */
 
-.catalog { max-width: 980px; margin: 0 auto; padding: 56px 22px 60px; }
+.catalog { max-width: 980px; margin: 0 auto; padding: 40px 22px 60px; }
+
+.catalog-top { display: flex; justify-content: flex-end; margin-bottom: 16px; }
+.how-link { font-size: 13.5px; font-weight: 700; color: var(--blue); text-decoration: none; }
+.how-link:hover { text-decoration: underline; }
 
 .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
 .filter-btn {

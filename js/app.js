@@ -50,11 +50,6 @@ function renderSite(site) {
   document.getElementById("heroTitle").textContent = site.hero.title;
   document.getElementById("heroSubtitle").textContent = site.hero.subtitle;
   document.getElementById("heroCta").textContent = site.hero.primaryCta;
-
-  document.getElementById("howTitle").textContent = site.howItWorks.title;
-  document.getElementById("howGrid").innerHTML = site.howItWorks.steps.map((s) => `
-    <div class="how-card"><h3>${s.title}</h3><p>${s.text}</p></div>
-  `).join("");
 }
 
 async function init() {
