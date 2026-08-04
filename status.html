@@ -4,60 +4,68 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Мій статус — ProMedia Labs</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon.svg" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">ProMedia Labs</a>
-    <nav class="site-nav">
-      <a class="back" href="https://promedia.report">← ProMedia</a>
-      <a href="index.html#catalog">Курси</a>
-      <a href="status.html">Мій статус</a>
-    </nav>
-  </div>
-</header>
-
-<div class="form-wrap">
-  <h1>Перевірити статус заявки</h1>
-  <p class="lead">
-    Коли ви подаєте заявку чи реєструєтесь на курс, ви отримуєте на email
-    номер заявки (формат <code>PML-XXXXXXX</code>) — за ним ми відповідаємо
-    на будь-яке звернення. Автоматична перевірка статусу онлайн з'явиться
-    пізніше разом із бекендом; наразі напишіть нам номер заявки і ми
-    відповімо, на якому вона етапі.
-  </p>
-
-  <div class="form-status" id="formStatus"></div>
-  <form id="statusForm">
-    <div class="field">
-      <label for="f_applicationId">Номер заявки</label>
-      <input type="text" id="f_applicationId" name="applicationId" placeholder="PML-XXXXXXX" required />
-      <div class="hint">Був у листі-підтвердженні одразу після подачі заявки.</div>
-    </div>
-    <div class="field">
-      <label for="f_email">Email, який вказали в заявці</label>
-      <input type="email" id="f_email" name="email" required />
-    </div>
-    <button class="btn" type="submit" style="width:100%; justify-content:center">Запитати статус</button>
-  </form>
+<div class="utility-bar">
+  <a class="home-btn" href="https://promedia.report">← ПроМедіа</a>
+  <a class="home-btn" href="index.html">← До курсів</a>
 </div>
 
+<main class="wrap" style="padding:40px 24px 70px">
+  <div class="form-card">
+    <h1>Перевірити статус заявки</h1>
+    <p class="lead">
+      Коли ви подаєте заявку чи реєструєтесь на курс, ви отримуєте на email
+      номер заявки (формат <code>PML-XXXXXXX</code>) — за ним ми відповідаємо
+      на будь-яке звернення. Автоматична перевірка статусу онлайн з'явиться
+      пізніше разом із бекендом; наразі напишіть нам номер заявки і ми
+      відповімо, на якому вона етапі.
+    </p>
+
+    <div class="panel">
+      <div class="form-status" id="formStatus"></div>
+      <form id="statusForm">
+        <div class="field">
+          <label for="f_applicationId">Номер заявки</label>
+          <input type="text" id="f_applicationId" name="applicationId" placeholder="PML-XXXXXXX" required />
+          <div class="hint">Був у листі-підтвердженні одразу після подачі заявки.</div>
+        </div>
+        <div class="field">
+          <label for="f_email">Email, який вказали в заявці</label>
+          <input type="email" id="f_email" name="email" required />
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Запитати статус</button>
+      </form>
+    </div>
+  </div>
+</main>
+
 <footer class="site-footer">
-  <div class="footer-inner">
-    <img class="footer-logo" src="img/logo.png" alt="ProMedia logo" />
-    <div>
-      <nav class="footer-nav">
-        <a href="index.html#catalog">Курси</a>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ProMedia Labs</div>
+        <p style="font-size:13px;max-width:34ch">Курси для медійників: офлайн з відбором, онлайн-потоки й курси в записі. Ініціатива ГО «ПроМедіа».</p>
+      </div>
+      <div>
+        <h4>Курси</h4>
+        <a href="index.html">Усі курси</a>
         <a href="how-it-works.html">Як це працює</a>
         <a href="status.html">Мій статус</a>
+      </div>
+      <div>
+        <h4>Інформація</h4>
         <a href="https://promedia.report">promedia.report</a>
         <a href="https://promedia.report/privacy-policy/">Політика конфіденційності</a>
-      </nav>
-      <p>Питання щодо курсів: <a href="mailto:labs@promedia.report">labs@promedia.report</a></p>
-      <p class="copyright">© 2026 ProMedia. Усі права захищено.</p>
+        <a href="mailto:labs@promedia.report">labs@promedia.report</a>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>© 2026 ГО «ПроМедіа»</span>
+      <span>labs.promedia.report</span>
     </div>
   </div>
 </footer>

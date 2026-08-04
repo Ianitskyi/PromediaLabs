@@ -44,14 +44,16 @@ async function init() {
   document.title = `${type.formTitle} — ${course.title}`;
 
   root.innerHTML = `
-    <a class="breadcrumb" href="course.html?slug=${slug}">← ${course.title}</a>
+    <a class="back-link" href="course.html?slug=${slug}">← ${course.title}</a>
     <h1>${type.formTitle}</h1>
     <p class="lead">${type.formLead}</p>
-    <div class="form-status" id="formStatus"></div>
-    <form id="applyForm">
-      ${type.fields.map(fieldHTML).join("")}
-      <button class="btn" type="submit" style="width:100%; justify-content:center">Надіслати</button>
-    </form>
+    <div class="panel">
+      <div class="form-status" id="formStatus"></div>
+      <form id="applyForm">
+        ${type.fields.map(fieldHTML).join("")}
+        <button class="btn btn-primary btn-block" type="submit">Надіслати</button>
+      </form>
+    </div>
   `;
 
   document.getElementById("applyForm").addEventListener("submit", async (e) => {

@@ -5,52 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ProMedia Labs — курси для медійників</title>
 <meta name="description" content="Офлайн-інтенсиви з відбором, онлайн-потоки з реєстрацією та курси в записі від ProMedia NGO." />
-<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon.svg" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">ProMedia Labs</a>
-    <nav class="site-nav">
-      <a class="back" href="https://promedia.report">← ProMedia</a>
-      <a href="index.html#catalog">Курси</a>
-      <a href="status.html">Мій статус</a>
-    </nav>
-  </div>
-</header>
+<div class="utility-bar">
+  <a class="home-btn" href="https://promedia.report">← ПроМедіа</a>
+  <a class="home-btn" href="how-it-works.html">Як це працює</a>
+  <a class="home-btn" href="status.html" style="margin-left:auto">Мій статус →</a>
+</div>
 
 <h1 class="sr-only">ProMedia Labs — курси для медійників</h1>
 
-<section class="catalog" id="catalog">
+<main class="wrap" style="padding:26px 24px 70px">
   <div class="catalog-top">
-    <a class="how-link" href="how-it-works.html">Як проходить набір і оплата? →</a>
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">Усі</button>
+      <button class="filter-btn" data-filter="offline_selection">Офлайн (відбір)</button>
+      <button class="filter-btn" data-filter="online_paid_cohort">Онлайн-потоки</button>
+      <button class="filter-btn" data-filter="recorded_paid">У записі</button>
+    </div>
   </div>
-  <div class="filters" id="filters">
-    <button class="filter-btn active" data-filter="all">Усі</button>
-    <button class="filter-btn" data-filter="offline_selection">Офлайн (відбір)</button>
-    <button class="filter-btn" data-filter="online_paid_cohort">Онлайн-потоки</button>
-    <button class="filter-btn" data-filter="recorded_paid">У записі</button>
-  </div>
-  <div class="course-grid" id="courseGrid">
+  <p class="result-count" id="resultCount"></p>
+  <div class="cards-grid" id="courseGrid">
     <p style="color:var(--muted)">Завантаження курсів…</p>
   </div>
-</section>
+</main>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <img class="footer-logo" src="img/logo.png" alt="ProMedia logo" />
-    <div>
-      <nav class="footer-nav">
-        <a href="index.html#catalog">Курси</a>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ProMedia Labs</div>
+        <p style="font-size:13px;max-width:34ch">Курси для медійників: офлайн з відбором, онлайн-потоки й курси в записі. Ініціатива ГО «ПроМедіа».</p>
+      </div>
+      <div>
+        <h4>Курси</h4>
+        <a href="index.html">Усі курси</a>
         <a href="how-it-works.html">Як це працює</a>
         <a href="status.html">Мій статус</a>
+      </div>
+      <div>
+        <h4>Інформація</h4>
         <a href="https://promedia.report">promedia.report</a>
         <a href="https://promedia.report/privacy-policy/">Політика конфіденційності</a>
-      </nav>
-      <p>Питання щодо курсів: <a href="mailto:labs@promedia.report">labs@promedia.report</a></p>
-      <p class="copyright">© 2026 ProMedia. Усі права захищено.</p>
+        <a href="mailto:labs@promedia.report">labs@promedia.report</a>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>© 2026 ГО «ПроМедіа»</span>
+      <span>labs.promedia.report</span>
     </div>
   </div>
 </footer>

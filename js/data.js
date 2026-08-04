@@ -1,15 +1,15 @@
 /* Єдиний словник статусів набору. Бейдж на картці й підпис кнопки CTA
    завжди беруться звідси — тому вони ніколи не суперечать одне одному. */
 const STATUS_META = {
-  not_started:        { label: "Набір ще не почався",  tone: "not_started",        ctaOverride: "Ще не відкрито", disabled: true },
-  open:                { label: "Набір відкрито",        tone: "open" },
-  selection:           { label: "Відбір триває",         tone: "selection",          ctaOverride: "Заявки на розгляді", disabled: true },
-  closed:              { label: "Набір закрито",         tone: "closed",             ctaOverride: "Набір закрито", disabled: true },
-  enrolled:            { label: "Групу сформовано",      tone: "enrolled",           ctaOverride: "Набір закрито", disabled: true },
-  registration_open:   { label: "Реєстрація відкрита",   tone: "registration_open" },
-  few_seats:           { label: "Місця закінчуються",    tone: "few_seats" },
-  full:                { label: "Місць немає",           tone: "full",               ctaOverride: "Список очікування" },
-  available:           { label: "Доступно",              tone: "available" }
+  not_started:        { label: "Набір ще не почався",  tone: "muted",  ctaOverride: "Ще не відкрито", disabled: true },
+  open:                { label: "Набір відкрито",        tone: "green" },
+  selection:           { label: "Відбір триває",         tone: "accent", ctaOverride: "Заявки на розгляді", disabled: true },
+  closed:              { label: "Набір закрито",         tone: "muted",  ctaOverride: "Набір закрито", disabled: true },
+  enrolled:            { label: "Групу сформовано",      tone: "red",    ctaOverride: "Набір закрито", disabled: true },
+  registration_open:   { label: "Реєстрація відкрита",   tone: "green" },
+  few_seats:           { label: "Місця закінчуються",    tone: "accent" },
+  full:                { label: "Місць немає",           tone: "red",    ctaOverride: "Список очікування" },
+  available:           { label: "Доступно",              tone: "green" }
 };
 
 /* Тип курсу визначає, яка форма й яка кнопка-дія йому належить. */
