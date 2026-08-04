@@ -39,8 +39,8 @@ choice31.com. Спільний робочий патерн — конкурсн�
 | `js/data.js` | `STATUS_META`, `COURSE_TYPE_META`, `FIELD_META` — єдині словники логіки набору; завантаження `content/*.json` |
 | `js/submit.js` | Відправка форм: POST на `content/site.json → forms.endpoint`, якщо він налаштований, інакше — чесний `mailto:` fallback (без вдавання, що дані десь "збережені", коли бекенду ще нема) |
 | `content/courses.json` | Дані курсів — єдине джерело правди, редагується через адмінку |
-| `content/site.json` | Тексти хіро/footer, налаштування форм |
-| `css/style.css` | Брендинг ProMedia (navy `#0d0c5c` + accent `#ffac33`, Playfair Display + Montserrat) — ті самі токени, що й у `ratings.promedia.report` |
+| `content/site.json` | Тексти секції «Як це працює», налаштування форм |
+| `css/style.css` | Брендинг ProMedia (navy `#0d0c5c` + accent `#ffac33`, Playfair Display + Montserrat) — той самий дизайн-токен і компонентний набір (utility-bar, cards-grid, panel, tag, footer-grid), що й у `ratings.promedia.report` та `jobs.promedia.report` |
 
 ## Редагування з адмінки ProMedia
 
